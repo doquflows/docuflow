@@ -1,0 +1,16 @@
+{
+  "name": "@doquflow/server",
+  "version": "0.1.0",
+  "description": "Docuflow MCP server — lets AI agents read codebases and persist living specs",
+  "author": "Docuflow <hello@doquflows.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/doquflows/docuflow",
+  "repository": { "type": "git", "url": "https://github.com/doquflows/docuflow.git" },
+  "bugs": { "url": "https://github.com/doquflows/docuflow/issues" },
+  "keywords": ["mcp", "ai-agents", "claude-code", "documentation", "codebase", "developer-tools"],
+  "bin": { "docuflow-server": "./dist/index.js" },
+  "files": ["dist/**"],
+  "scripts": { "build": "tsc" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.4" },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" }
+}
