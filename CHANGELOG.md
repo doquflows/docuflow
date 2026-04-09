@@ -6,6 +6,13 @@ Versioning follows [Semantic Versioning](https://semver.org)
 
 ---
 
+## [0.1.1] — 2026-04-09
+
+### Added
+- Package README files on npmjs.com for both `@doquflow/server` and `@doquflow/cli`
+
+---
+
 ## [0.1.0] — 2026-04-09
 
 ### First public release
