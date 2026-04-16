@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0] - 2026-04-16
+
+### Added
+- (Add your changes here)
+
+### Changed
+- (Add your changes here)
+
+### Fixed
+- (Add your changes here)
+
+
 All notable changes to Docuflow are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com)
 Versioning follows [Semantic Versioning](https://semver.org)
