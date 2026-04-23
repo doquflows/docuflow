@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/cli",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "CLI for setting up Docuflow in your project",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@doquflow/server": "0.3.0"
+    "@doquflow/server": "0.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

@@ -1,15 +1,31 @@
 # Changelog
 
-## [0.3.0] - 2026-04-16
+## [0.4.0] - 2026-04-23
 
 ### Added
-- (Add your changes here)
 
-### Changed
-- (Add your changes here)
+- **`generate_dependency_graph`** — 15th MCP tool. Scans a project and builds an import/shared-table/shared-endpoint graph. Returns `nodes`, `edges`, `shared_tables`, `shared_endpoints`, and `most_connected` (top 10 highest-risk files). Supports `focus` (neighbourhood filter) and `extensions` filter.
+- **`docuflow suggest`** — New CLI command. Domain-aware first-steps guidance — auto-detects your domain (Code/Research/Business/Personal) from `.docuflow/schema.md`, prints 5 prioritised wiki page suggestions with reasons and ready-to-paste Claude prompts.
+- **CLAUDE.md generation** — `docuflow init` and `docuflow init --interactive` now write `CLAUDE.md` at the project root. Contains all 15 tool descriptions, common workflows, and storage layout. Idempotent: safe to run multiple times.
+- **Staleness detection** — `list_wiki` returns `stale: boolean` per page and `stale_pages` total count. `read_specs` returns `stale: boolean` per spec. Threshold: 30 days since last update.
+- **Go extraction** — Struct/interface types, func declarations, import blocks, `os.Getenv`, gorilla/mux/gin/chi/echo HTTP routes, GORM table references.
+- **Ruby/Rails extraction** — Class/module/def declarations, require, `ENV[]`, Rails route helpers (`get`, `post`, `resources`), ActiveRecord associations and explicit table names.
+- **Enhanced `docuflow status`** — Now shows package version, CLAUDE.md presence, wiki page counts by category, source file count, last ingest date, and smart hints.
+- **Richer ingest_source pages** — Entity and concept pages now include the surrounding paragraph from the source document instead of an empty "Introduced in" stub.
+- **Dynamic preview_generation** — Previews now read actual wiki page count and source file size before producing estimates instead of using hardcoded strings.
 
 ### Fixed
-- (Add your changes here)
+
+- **lint_wiki path bug** — All health check functions were looking for pages at `wiki/pageId.md` (flat) instead of `wiki/entities/pageId.md` (subdirectory). Result: every lint check silently returned 0 issues. Now correctly resolves full file paths.
+- **Category pluralization bug** — `"entities".replace("s","")` → `"entitie"` (not `"entity"`). Fixed in `list_wiki`, `wiki_search`, `update_index`, and `save_answer_as_page` using a lookup map.
+- **save_answer_as_page links** — Related Pages linked to `../CATEGORY/pageId.md` with the literal string `"CATEGORY"`. Now resolves the actual directory name.
+- **list_wiki filter bug** — Filtering by category `entity` was building path `wiki/entitys/`. Fixed with `SINGULAR_TO_PLURAL` map.
+- **init-interactive.ts tip** — Misleading "open `.claude/instructions.md`" tip now correctly references `CLAUDE.md`.
+
+### Changed
+
+- Tool count: 14 → 15
+- CLI commands: 2 → 3 (`suggest` added)
 
 
 ## [0.2.0] - 2026-04-16
