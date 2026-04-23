@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.4.6] - 2026-04-23
+
+### Added
+- `docuflow init` now registers DocuFlow in **OpenAI Codex CLI** (`~/.codex/config.toml`) — MCP tools available in every Codex session automatically
+- `docuflow init` now generates **AGENTS.md** in the project root — Codex reads DocuFlow tool instructions automatically (mirrors CLAUDE.md for Claude Code)
+- `docuflow init` output now lists all 5 targets: Claude Desktop, VS Code Copilot (user), Copilot CLI, Codex CLI, Workspace
+
+
+
+### Added
+- `docuflow init` now registers DocuFlow in **GitHub Copilot CLI** (`~/.copilot/mcp-config.json`) — tools available in `gh copilot` agent sessions automatically
+- `docuflow init` now writes a **project-level `.vscode/mcp.json`** — commit it to share DocuFlow with your whole team without each member needing to run init
+- `docuflow init` output now shows all 4 registration targets: Claude Desktop ✓, VS Code Copilot (user) ✓, Copilot CLI ✓, Workspace ✓
+
+## [0.4.4] - 2026-04-23
+
+### Added
+- (Add your changes here)
+
+### Changed
+- (Add your changes here)
+
+### Fixed
+- (Add your changes here)
+
+
 ## [0.4.3] - 2026-04-23
 
 ### Added
