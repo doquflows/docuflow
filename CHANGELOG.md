@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.5] - 2026-04-23
+
+### Added
+- `docuflow init` now registers DocuFlow in **GitHub Copilot CLI** (`~/.copilot/mcp-config.json`) — tools available in `gh copilot` agent sessions automatically
+- `docuflow init` now writes a **project-level `.vscode/mcp.json`** — commit it to share DocuFlow with your whole team without each member needing to run init
+- `docuflow init` output now shows all 4 registration targets: Claude Desktop ✓, VS Code Copilot (user) ✓, Copilot CLI ✓, Workspace ✓
+
 ## [0.4.4] - 2026-04-23
 
 ### Added
