@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.3] - 2026-05-01
+## [0.5.4] - 2026-05-01
 
 ### Added
 - (Add your changes here)
@@ -10,6 +10,32 @@
 
 ### Fixed
 - (Add your changes here)
+
+
+## [0.5.3] - 2026-05-01
+
+### Added
+- **`docuflow sync --ai`** — One-shot wiki sync (AI-powered locally)
+  - Auto-detects best AI bridge (Copilot → Claude Code → Codex)
+  - `--copilot`, `--claude`, `--codex` flags to force bridge
+  - `--since-commit REF` for incremental sync
+  - `--fail-on-score N` to fail if health < threshold
+  - `--quiet` mode for scripting/CI integration
+- **Local-first development** — Git post-commit hook auto-syncs on every commit
+  - No GitHub Actions workflow overhead
+  - No API key management needed
+  - Instant local feedback on wiki health
+- **Comprehensive setup guide** — `LOCAL_SYNC_SETUP.md` with workflows and troubleshooting
+
+### Changed
+- **CLI now prioritizes local AI bridges** for faster, more reliable sync
+  - Copilot CLI (MCP direct calling) preferred
+  - Claude Code and Codex supported
+  - ANTHROPIC_API_KEY fallback for API-based sync
+
+### Fixed
+- Watch daemon graceful recovery on AI bridge timeouts
+- Proper handling of no-code-changes commits
 
 
 ## [0.5.2] - 2026-05-01

@@ -83,6 +83,29 @@ cp /path/to/document.md .docuflow/sources/
 | `docuflow init --interactive` | Interactive domain-aware setup (Code/Research/Business/Personal) |
 | `docuflow status` | Show wiki counts by category, source count, CLAUDE.md presence, last ingest, version |
 | `docuflow suggest` | Domain-aware first-steps: 5 prioritised page suggestions + ready-to-paste Claude prompts |
+| `docuflow sync --ai` | One-shot wiki sync using local AI bridge (Copilot/Claude/Codex) |
+| `docuflow watch --ai` | Continuous daemon sync: watches for code/source changes and updates wiki automatically |
+
+## Local Wiki Sync (v0.5.3+)
+
+**New in v0.5.3**: Sync your wiki locally using **Copilot CLI**, **Claude Code CLI**, or **Codex CLI** — no API keys, no CI/CD overhead.
+
+```bash
+# Install global
+npm install -g @doquflow/cli
+
+# One-shot sync (whenever you want)
+docuflow sync --ai
+docuflow sync --ai --copilot        # Force Copilot
+
+# Continuous background sync
+docuflow watch --ai
+docuflow watch status               # Check daemon
+docuflow watch stop                 # Stop daemon
+
+# Auto-sync on every commit (enabled by default)
+# Just commit — `.git/hooks/post-commit` handles the rest
+```
 
 ## Languages supported
 
