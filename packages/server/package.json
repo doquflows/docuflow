@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/server",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Docuflow MCP server — lets AI agents read codebases and persist living specs",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
