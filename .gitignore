@@ -48,3 +48,4 @@ temp/
 .waymark/
 waymark.db
 data/waymark.db
+AGENTS.md
