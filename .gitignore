@@ -43,3 +43,8 @@ coverage/
 # Temporary
 tmp/
 temp/
+
+# Waymark
+.waymark/
+waymark.db
+data/waymark.db

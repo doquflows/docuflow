@@ -1,6 +1,67 @@
 # Changelog
 
-## [0.4.6] - 2026-04-23
+## [0.5.1] - 2026-05-01
+
+### Added
+- (Add your changes here)
+
+### Changed
+- (Add your changes here)
+
+### Fixed
+- (Add your changes here)
+
+
+## [0.5.0] - 2026-05-01
+
+### Added
+
+**`docuflow watch` — Auto-sync daemon**
+- Background daemon that watches for changes and syncs the wiki automatically
+- Source file watcher: drop a `.md` into `.docuflow/sources/` and it's ingested in <1 second
+- Code file watcher: detects changes to `.ts`, `.py`, `.go`, `.rb`, `.java`, `.cs` etc. and triggers AI-powered documentation
+- Scheduled lint: runs `lint_wiki` every N hours (default: 24h) and reports health score
+- `--lint-interval N`, `--code-ext ts,py` flags
+- `--ai` flag enables the AI bridge (auto-detects best available)
+- `--copilot`, `--claude`, `--codex` flags to force a specific AI bridge
+
+**`docuflow watch stop/status/restart` — Daemon lifecycle**
+- `watch stop` — gracefully stop the running daemon (SIGTERM → 5s wait → SIGKILL if needed)
+- `watch status` — see if daemon is running: shows `● running`, PID, uptime, bridge, started time
+- `watch restart` — stop + restart with identical options automatically
+- Auto-cleans stale PID files if the process died unexpectedly
+
+**`docuflow sync` — One-shot sync for CI/CD and git hooks**
+- Re-ingest all sources, rebuild index, run health check — in one command
+- `--source <file>` — sync a single file
+- `--no-lint` — skip health check (faster)
+- `--fail-on-score N` — exit 1 if health score < N (CI quality gate, default: 70)
+- `--quiet` — suppress output for clean CI logs
+- `--since-commit <REF>` — only process code that changed since a git ref
+- `--ai` — AI-powered sync: detects changed code and auto-documents it
+
+**AI bridge — 4 supported AI engines**
+
+| Priority | Bridge | How it syncs |
+|----------|--------|--------------|
+| 1 | `@github/copilot` CLI | **Directly calls DocuFlow MCP tools** (ingest, index, lint) ⚡ |
+| 2 | `claude` CLI (Claude Code) | **Directly calls DocuFlow MCP tools** ⚡ |
+| 3 | `codex` CLI (OpenAI Codex) | Generates doc text → saves to sources/ → ingests |
+| 4 | `ANTHROPIC_API_KEY` | Same as codex via direct HTTPS API |
+
+**Key insight**: When `@github/copilot` or `claude` is used, the AI agent directly calls DocuFlow MCP tools (`ingest_source`, `update_index`, `lint_wiki`) and returns a full wiki maintenance report — no intermediate step needed.
+
+**Git hook auto-installation**
+- `docuflow init` now installs `.git/hooks/post-commit` automatically
+- After every `git commit`, the wiki syncs in the background (never delays your git workflow)
+- Uses the best available AI bridge automatically
+
+### Fixed
+
+- Double-fire on macOS `fs.watch` — debounce prevents duplicate ingestion
+- `setInterval` 32-bit overflow for large lint intervals
+- Claude CLI bridge now passes `--dangerously-skip-permissions` for non-interactive MCP tool use
+
 
 ### Added
 - `docuflow init` now registers DocuFlow in **OpenAI Codex CLI** (`~/.codex/config.toml`) — MCP tools available in every Codex session automatically
