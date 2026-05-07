@@ -50,6 +50,6 @@ waymark.db
 data/waymark.db
 AGENTS.md
 docuflow_design/
-.claude/
+.claude/settings.local.json
 .devloop/
 devloop.config.sh
