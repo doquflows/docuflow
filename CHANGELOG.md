@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0] - 2026-05-07
+## [1.1.1] - 2026-05-07
 
 ### Added
 - (Add your changes here)
@@ -10,18 +10,29 @@
 
 ### Fixed
 - (Add your changes here)
+
+
+## [1.1.0] - 2026-05-07
+
+### Added
+- **`docuflow ui`** — New CLI command: starts an all-in-one Express server (port 48821) with React web interface + HTTP API
+  - Auto-discovers DocuFlow projects in common dev directories
+  - Opens browser automatically; `--no-open` and `--port` flags supported
+- **`docuflow start`** — Alias for `docuflow ui`
+- **Web UI bundled in npm package** — `ui-dist/` shipped inside `@doquflow/cli`; no separate install needed
+
+### Changed
+- Root build order updated: `server → ui → cli → api`
+
+### Fixed
+- `.gitignore` now correctly tracks `.claude/commands/` skill files
 
 
 ## [1.0.0] - 2026-05-07
 
 ### Added
-- (Add your changes here)
-
-### Changed
-- (Add your changes here)
-
-### Fixed
-- (Add your changes here)
+- Web UI package (`packages/ui/`): Vite + React 18 interface with 6 views (Ask, Wiki, Graph, Health, Sync, Onboard)
+- API bridge package (`packages/api/`): Express HTTP bridge for local development
 
 
 ## [Unreleased] — v0.6.0
