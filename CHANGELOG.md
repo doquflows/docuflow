@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.2] - 2026-05-07
+
+### Added
+- (Add your changes here)
+
+### Changed
+- (Add your changes here)
+
+### Fixed
+- (Add your changes here)
+
+
 ## [1.1.1] - 2026-05-07
 
 ### Added
