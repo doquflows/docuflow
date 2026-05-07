@@ -49,3 +49,7 @@ temp/
 waymark.db
 data/waymark.db
 AGENTS.md
+docuflow_design/
+.claude/
+.devloop/
+devloop.config.sh

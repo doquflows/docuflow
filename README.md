@@ -46,6 +46,33 @@ cp /path/to/document.md .docuflow/sources/
 # Or call tools directly
 ```
 
+## Web UI (v0.6.0)
+
+A live browser interface for your Docuflow wiki. No build step — runs straight from the npm package.
+
+```bash
+# Start the API bridge (port 48821)
+npm run start-api
+
+# In a second terminal, start the web interface (port 5173)
+npm run start-web
+
+# Open http://localhost:5173
+```
+
+Six views are available once both servers are running:
+
+| View | What it shows |
+|------|--------------|
+| **Ask** | AI-powered Q&A — type a question, get a synthesised answer with wiki source citations |
+| **Wiki** | Live page browser with category tree (Entities / Concepts / Syntheses / Timelines) |
+| **Graph** | Dependency visualiser — all wiki pages as an interactive node graph |
+| **Health** | Wiki quality dashboard — health score (0–100), stale pages, open issues with fix buttons |
+| **Sync** | Daemon activity monitor — status, AI bridge detected, recent operation timeline |
+| **Onboard** | New project setup wizard — choose domain and get a ready-to-run `init` command |
+
+The UI auto-discovers all Docuflow projects in `~/dev`, `~/code`, `~/projects`, `~/work`, `~/src`, and `~/Desktop`. A project picker appears in the top bar when multiple projects are found. All views show live data; if the API server is offline the UI falls back to demo mode automatically.
+
 ## Tools (15 total)
 
 ### Code Extraction (4 tools)
@@ -115,6 +142,7 @@ Unknown file types return full raw content — the server never fails on unfamil
 
 ## Features
 
+- ✅ **Web UI** — Live browser interface with 6 views: Ask, Wiki, Graph, Health, Sync, Onboard (v0.6.0)
 - ✅ **Persistent Knowledge** — Sources ingested once, not re-extracted on every query
 - ✅ **Domain-Aware** — 4 built-in schemas (Code, Research, Business, Personal)
 - ✅ **LLM-Maintained** — AI writes and maintains wiki; humans curate sources
@@ -172,7 +200,7 @@ All intelligence stays in your agent. Docuflow is a pure filesystem tool — it 
 
 ## Status
 
-✅ **Production Ready** — v0.4.0, 15 MCP tools, 3 CLI commands, 0 known bugs
+✅ **Production Ready** — v0.6.0, 15 MCP tools, 6 CLI commands, Web UI with live API bridge, 0 known bugs
 
 ## License
 
