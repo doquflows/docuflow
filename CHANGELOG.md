@@ -1,7 +1,5 @@
 # Changelog
 
-## [Unreleased]
-
 ## [1.3.0] - 2026-05-09
 
 ### Added
@@ -84,24 +82,6 @@
 ### Added
 - Web UI package (`packages/ui/`): Vite + React 18 interface with 6 views (Ask, Wiki, Graph, Health, Sync, Onboard)
 - API bridge package (`packages/api/`): Express HTTP bridge for local development
-
-
-## [Unreleased] — v0.6.0
-
-### Added
-- **Web UI** — Vite + React 18 interface for DocuFlow
-  - 6 views: Ask (AI-powered Q&A with citations), Wiki (live page browser), Graph (dependency visualiser), Health (quality dashboard), Sync (activity monitor), Onboard (new project setup)
-  - All views wired to live API data; graceful demo fallback when API offline
-  - Project picker when multiple DocuFlow projects are detected
-- **HTTP API bridge** (`packages/api`) — Express server on port 48821
-  - Endpoints: `/api/projects`, `/api/wiki`, `/api/wiki/:pageId`, `/api/health`, `/api/activity`, `/api/ask`, `/api/search`
-  - Auto-discovers DocuFlow projects in `~/dev`, `~/code`, `~/projects`, `~/work`, `~/src`, `~/Desktop`
-  - Imports MCP tool functions directly — no subprocess overhead
-- **Quick start scripts**: `npm run start-api` + `npm run start-web` to launch the full UI stack
-- **`docuflow review`** — New git-change review command with deterministic findings and actionable improvements
-  - Supports `--staged` and `--since-commit <ref>` scope selection
-  - `--ai` appends non-fatal Copilot review output when available
-  - `--fail-on-critical` exits with code 1 only when critical findings exist
 
 
 ## [0.5.6] - 2026-05-07
