@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/cli",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "CLI for setting up Docuflow in your project",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "build": "tsc && node -e \"const fs=require('fs'),p=require('path'),src=p.join(process.cwd(),'../ui/dist'),dst=p.join(process.cwd(),'ui-dist');if(!fs.existsSync(src)){console.log('Warning: packages/ui/dist not found — run npm run build:ui first');process.exit(0)}fs.mkdirSync(dst,{recursive:true});fs.cpSync(src,dst,{recursive:true,force:true});console.log('  ✓ ui-dist synced from packages/ui/dist ('+(fs.readdirSync(dst).length)+' files at root)')\""
   },
   "dependencies": {
-    "@doquflow/server": "1.5.0",
+    "@doquflow/server": "1.5.1",
     "cors": "^2.8.5",
     "express": "^4.19.2"
   },
