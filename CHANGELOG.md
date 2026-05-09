@@ -1,5 +1,23 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- (Add your changes here)
+
+## [1.3.0] - 2026-05-09
+
+### Added
+- **`docuflow review`** — Review current git changes with deterministic findings and optional Copilot analysis
+  - Analyzes staged, working tree, or commit range changes
+  - Detects: hardcoded secrets, SQL destructive ops, debug statements, TODO markers, type weakening
+  - `--ai` augments review with Copilot analysis when available
+  - `--fail-on-critical` exits with code 1 when critical findings exist
+  - Scopes: `--staged` (staged only), `--since-commit <ref>` (commit range), default (all changes)
+
+### Fixed
+- DevLoop reviewer agent contract now enforces canonical first-line verdict format (`Verdict: APPROVED / NEEDS_WORK / REJECTED`)
+
 ## [1.2.1] - 2026-05-07
 
 ### Added
@@ -83,6 +101,10 @@
   - Auto-discovers DocuFlow projects in `~/dev`, `~/code`, `~/projects`, `~/work`, `~/src`, `~/Desktop`
   - Imports MCP tool functions directly — no subprocess overhead
 - **Quick start scripts**: `npm run start-api` + `npm run start-web` to launch the full UI stack
+- **`docuflow review`** — New git-change review command with deterministic findings and actionable improvements
+  - Supports `--staged` and `--since-commit <ref>` scope selection
+  - `--ai` appends non-fatal Copilot review output when available
+  - `--fail-on-critical` exits with code 1 only when critical findings exist
 
 
 ## [0.5.6] - 2026-05-07

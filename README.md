@@ -112,6 +112,8 @@ The UI auto-discovers all Docuflow projects in `~/dev`, `~/code`, `~/projects`, 
 | `docuflow suggest` | Domain-aware first-steps: 5 prioritised page suggestions + ready-to-paste Claude prompts |
 | `docuflow sync --ai` | One-shot wiki sync using local AI bridge (Copilot/Claude/Codex) |
 | `docuflow watch --ai` | Continuous daemon sync: watches for code/source changes and updates wiki automatically |
+| `docuflow review --ai` | Review git changes with deterministic findings + optional Copilot analysis; `--staged`, `--since-commit`, `--fail-on-critical` flags |
+| `docuflow ui` / `docuflow start` | Start web interface + API bridge on port 48821; auto-discovers projects; `--no-open` and `--port` flags supported |
 
 ## Local Wiki Sync (v0.5.3+)
 
@@ -200,7 +202,7 @@ All intelligence stays in your agent. Docuflow is a pure filesystem tool — it 
 
 ## Status
 
-✅ **Production Ready** — v0.6.0, 15 MCP tools, 6 CLI commands, Web UI with live API bridge, 0 known bugs
+✅ **Production Ready** — v0.6.0, 15 MCP tools, 8 CLI commands, Web UI with live API bridge, 0 known bugs
 
 ## License
 

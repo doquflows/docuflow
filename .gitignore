@@ -53,3 +53,4 @@ docuflow_design/
 .claude/settings.local.json
 .devloop/
 devloop.config.sh
+.playwright-mcp/
