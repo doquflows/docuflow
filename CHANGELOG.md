@@ -1,18 +1,9 @@
 # Changelog
 
+## [1.4.0] - 2026-05-09
+
+
 ## [1.3.1] - 2026-05-09
-
-### Added
-- (Add your changes here)
-
-### Changed
-- (Add your changes here)
-
-### Fixed
-- (Add your changes here)
-
-
-## [Unreleased]
 
 ### Fixed
 - **Web UI navigation** — Removed duplicate nav items (Health/Sync appearing twice) caused by two separate `<nav>` blocks in Rail component; replaced with unified `RAIL_GROUPS` structure
