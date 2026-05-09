@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.3.1] - 2026-05-09
+
+### Added
+- (Add your changes here)
+
+### Changed
+- (Add your changes here)
+
+### Fixed
+- (Add your changes here)
+
+
+## [Unreleased]
+
+### Fixed
+- **Web UI navigation** — Removed duplicate nav items (Health/Sync appearing twice) caused by two separate `<nav>` blocks in Rail component; replaced with unified `RAIL_GROUPS` structure
+- **Web UI CSS tokens** — Added missing `--df-text-5` and `--df-bg-hover` CSS variables that caused invisible hover/active states
+- **Web UI active state** — Added `.df-action`, `.df-action--active`, and related component CSS classes; navigation items now show correct indigo left-bar indicator
+- **Web UI Onboard icon** — Added `onboard` key to `ICON_MAP` (was missing, showing `●` fallback instead of help icon)
+- **Web UI Settings version** — Fixed `v__APP_VERSION__` literal displaying instead of real version by adding Vite `define` injection in `vite.config.ts`
+- **Web UI Settings port** — Replaced hardcoded `48821` with dynamic `window.location.port` so Settings shows actual server port
+- **CLI dep pinning** — Changed `@doquflow/server` dependency in CLI `package.json` from `^1.3.0` to exact `1.3.0`
+
 ## [1.3.0] - 2026-05-09
 
 ### Added

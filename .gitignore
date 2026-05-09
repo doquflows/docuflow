@@ -46,6 +46,7 @@ temp/
 
 # Waymark
 .waymark/
+!.waymark/server.js
 waymark.db
 data/waymark.db
 AGENTS.md
