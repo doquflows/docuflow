@@ -55,3 +55,5 @@ docuflow_design/
 .devloop/
 devloop.config.sh
 .playwright-mcp/
+test/taskflow-api
+test/blog-post

@@ -1,11 +1,15 @@
 {
   "name": "@docuflow/api",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "private": true,
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "dev:3000": "PORT=3000 tsx watch src/index.ts",
+    "dev:3333": "PORT=3333 tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/api/src/index.js"
+    "start": "node dist/api/src/index.js",
+    "start:3000": "PORT=3000 node dist/api/src/index.js",
+    "start:3333": "PORT=3333 node dist/api/src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
