@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="280"
+  viewBox="0 0 860 280" style="background:#fff;border-radius:12px;font-family:system-ui,sans-serif">
+  <defs>
+    <linearGradient id="grad0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#818cf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#34d399" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Y grid + labels -->
+  
+    <line x1="64" y1="224.0" x2="836" y2="224.0"
+      stroke="#e5e7eb" stroke-width="1"/>
+    <text x="56" y="224.0" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">0</text>
+    <line x1="64" y1="179.9" x2="836" y2="179.9"
+      stroke="#e5e7eb" stroke-width="1"/>
+    <text x="56" y="179.9" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">183</text>
+    <line x1="64" y1="136.0" x2="836" y2="136.0"
+      stroke="#e5e7eb" stroke-width="1"/>
+    <text x="56" y="136.0" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">365</text>
+    <line x1="64" y1="91.9" x2="836" y2="91.9"
+      stroke="#e5e7eb" stroke-width="1"/>
+    <text x="56" y="91.9" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">548</text>
+    <line x1="64" y1="48.0" x2="836" y2="48.0"
+      stroke="#e5e7eb" stroke-width="1"/>
+    <text x="56" y="48.0" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">730</text>
+
+  <!-- Areas -->
+  
+    <polygon points="64.0,223.0 90.6,223.8 117.2,223.8 143.9,224.0 170.5,169.8 197.1,220.1 223.7,219.7 250.3,222.3 277.0,221.8 303.6,222.8 330.2,223.8 356.8,62.9 383.4,220.1 410.1,219.7 436.7,216.3 463.3,220.9 489.9,223.8 516.6,223.8 543.2,221.3 569.8,79.1 596.4,211.9 623.0,223.5 649.7,221.8 676.3,219.2 702.9,219.9 729.5,87.3 756.1,215.1 782.8,70.7 809.4,216.5 836.0,212.2 836.0,224.0 64.0,224.0" fill="url(#grad0)"/>
+    <polygon points="64.0,223.3 90.6,223.5 117.2,223.8 143.9,224.0 170.5,165.9 197.1,219.9 223.7,219.9 250.3,221.3 277.0,221.8 303.6,222.8 330.2,223.8 356.8,48.0 383.4,220.4 410.1,217.2 436.7,212.9 463.3,220.6 489.9,223.8 516.6,224.0 543.2,220.6 569.8,72.1 596.4,214.1 623.0,222.6 649.7,218.7 676.3,223.0 702.9,219.7 729.5,79.1 756.1,215.6 782.8,54.5 809.4,214.1 836.0,209.5 836.0,224.0 64.0,224.0" fill="url(#grad1)"/>
+
+  <!-- Lines -->
+  
+    <polyline points="64.0,223.0 90.6,223.8 117.2,223.8 143.9,224.0 170.5,169.8 197.1,220.1 223.7,219.7 250.3,222.3 277.0,221.8 303.6,222.8 330.2,223.8 356.8,62.9 383.4,220.1 410.1,219.7 436.7,216.3 463.3,220.9 489.9,223.8 516.6,223.8 543.2,221.3 569.8,79.1 596.4,211.9 623.0,223.5 649.7,221.8 676.3,219.2 702.9,219.9 729.5,87.3 756.1,215.1 782.8,70.7 809.4,216.5 836.0,212.2"
+      fill="none" stroke="#6366f1" stroke-width="2.2"
+      stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="64.0,223.3 90.6,223.5 117.2,223.8 143.9,224.0 170.5,165.9 197.1,219.9 223.7,219.9 250.3,221.3 277.0,221.8 303.6,222.8 330.2,223.8 356.8,48.0 383.4,220.4 410.1,217.2 436.7,212.9 463.3,220.6 489.9,223.8 516.6,224.0 543.2,220.6 569.8,72.1 596.4,214.1 623.0,222.6 649.7,218.7 676.3,223.0 702.9,219.7 729.5,79.1 756.1,215.6 782.8,54.5 809.4,214.1 836.0,209.5"
+      fill="none" stroke="#10b981" stroke-width="2.2"
+      stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- X axis labels -->
+  
+    <text x="64.0" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">Apr 12</text>
+    <text x="197.1" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">Apr 17</text>
+    <text x="330.2" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">Apr 22</text>
+    <text x="463.3" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">Apr 27</text>
+    <text x="596.4" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">May 2</text>
+    <text x="729.5" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">May 7</text>
+    <text x="836.0" y="242"
+      text-anchor="middle" font-size="11" fill="#6b7280">May 11</text>
+
+  <!-- End-point dots -->
+  
+    <circle cx="836.0" cy="212.2" r="4"
+      fill="#6366f1" stroke="#fff" stroke-width="2">
+      <title>49 downloads</title>
+    </circle>
+    <circle cx="836.0" cy="209.5" r="4"
+      fill="#10b981" stroke="#fff" stroke-width="2">
+      <title>60 downloads</title>
+    </circle>
+
+  <!-- Legend (top-left) -->
+  
+    <rect x="64" y="12" width="12" height="12" rx="3" fill="#6366f1"/>
+    <text x="82" y="22" font-size="13" fill="#374151" font-weight="600">
+      @doquflow/cli
+    </text>
+    <text x="82" y="36" font-size="11" fill="#6b7280">
+      3,066 last 30 days
+    </text>
+    <rect x="284" y="12" width="12" height="12" rx="3" fill="#10b981"/>
+    <text x="302" y="22" font-size="13" fill="#374151" font-weight="600">
+      @doquflow/server
+    </text>
+    <text x="302" y="36" font-size="11" fill="#6b7280">
+      3,316 last 30 days
+    </text>
+
+  <!-- Updated timestamp (bottom-right) -->
+  <text x="836" y="272" text-anchor="end"
+    font-size="10" fill="#9ca3af">Updated 2026-05-13</text>
+
+  <!-- Axes -->
+  <line x1="64" y1="48" x2="64" y2="224"
+    stroke="#d1d5db" stroke-width="1"/>
+  <line x1="64" y1="224" x2="836" y2="224"
+    stroke="#d1d5db" stroke-width="1"/>
+</svg>
