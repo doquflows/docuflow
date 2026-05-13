@@ -1,6 +1,12 @@
-https://github.com/user-attachments/assets/e8e75f1e-9fcb-48ab-ae9d-29b14dea2212
-
 # Docuflow
+
+[![npm downloads @doquflow/cli](https://img.shields.io/npm/dm/@doquflow/cli?label=%40doquflow%2Fcli&style=flat-square&color=6366f1)](https://www.npmjs.com/package/@doquflow/cli)
+[![npm downloads @doquflow/server](https://img.shields.io/npm/dm/@doquflow/server?label=%40doquflow%2Fserver&style=flat-square&color=10b981)](https://www.npmjs.com/package/@doquflow/server)
+[![npm version](https://img.shields.io/npm/v/@doquflow/cli?label=version&style=flat-square&color=374151)](https://www.npmjs.com/package/@doquflow/cli)
+
+![npm download chart](./docs/npm-downloads.svg)
+
+> Updated every 6 hours via GitHub Actions
 
 **Lets AI agents build persistent, incrementally-maintained knowledge bases using the LLM Wiki pattern.**
 
