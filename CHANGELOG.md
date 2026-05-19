@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.7.0] - 2026-05-20
+
+**Soft deprecation / core-vs-advanced surface split.** Second milestone of the philosophy reset. Zero command removal — every existing top-level path keeps working. See [v1.7.0.md](v1.7.0.md) for the full narrative.
+
+### Added
+- feat: `docuflow query "<question>"` core CLI command (#12) — direct value-out pipe, wraps `query_wiki` MCP tool; supports `--max-sources`, `--json`, `--no-cite`, `--save-as`, `--quiet`
+- feat: `docuflow ingest <file>` core CLI command (#13) — direct value-in pipe, wraps `ingest_source` MCP tool; supports `--all`, `--dry-run`, `--quiet`
+- feat: `MIGRATION.md` (#16) — philosophy-reset narrative + command mapping table; quotes the Tracker's Paradox LinkedIn post
+
+### Changed
+- refactor: CLI help core/advanced split (#14) — `docuflow --help` shows 5 core commands (init/ingest/query/status/rewiki); `docuflow advanced --help` shows 9 advanced commands (watch/sync/ui/start/review/recent/suggest/update); every old top-level path still works, the `advanced` prefix is optional
+- docs: CLAUDE.md auto-generation now features 4 core MCP tools (`query_wiki`, `ingest_source`, `wiki_search`, `read_module`) with the 11 advanced tools demoted to a second section (#15); BEGIN/END markers added for idempotent re-runs
+
+### Bright line
+Zero command removal through v2.x. Every existing `docuflow watch`, `docuflow sync --ai`, `docuflow ui`, etc. keeps working exactly as before. The new `advanced` prefix is *optional* everywhere.
+
 ## [1.6.0] - 2026-05-20
 
 **Philosophy Reset.** DocuFlow is returning to its core: *intent in, value out, nothing in between.* See [v1.6.0.md](v1.6.0.md) for the full narrative.
