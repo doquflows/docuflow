@@ -52,6 +52,7 @@ data/waymark.db
 AGENTS.md
 docuflow_design/
 .claude/settings.local.json
+.claude/worktrees/
 .devloop/
 devloop.config.sh
 .playwright-mcp/

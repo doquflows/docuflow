@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.6.0] - 2026-05-20
+
+**Philosophy Reset.** DocuFlow is returning to its core: *intent in, value out, nothing in between.* See [v1.6.0.md](v1.6.0.md) for the full narrative.
+
+### Added
+- feat: `docuflow rewiki` migration command (#4) — re-ingests all sources with current extractor rules, backs up wiki, migrates synthesiss/ typo, produces audit report
+- feat: 5-rule entity extractor + Rule 6 for structural noise (#3) — stop-list, no emoji/punct-only slugs, structural anchor, min token signal, context requirement, plus rejection of numbered list items, file references, question-form headings, preposition-led phrases, layer/phase markers, sentence-form captures, emoji-led decoration, "the X" descriptives, and date metadata
+- feat: `.docuflow/schema.md` philosophy-reset schema (#5) — canonical wiki structure for the Code & Architecture domain; CI guard fails the build if the placeholder template remains
+
+### Fixed
+- fix: `synthesiss/` typo bug (#2) — centralised `categoryDir()` helper replaces ad-hoc `category + "s"` pluralisation in `ingest-source.ts` and `save-answer-as-page.ts`
+- fix: npm-chart commit noise (#6) — weekly cron (Mon 09:00 UTC) instead of every 6h, `stats:` prefix instead of `chore:`, SVG relocated to `docs/stats/`
+
+### Proof run on this repo
+- Entity pages: **256 → 96** (62.5% reduction)
+- Total wiki pages: 283 → 123 (57% reduction)
+- Unit tests: 76 passing (extractor rules + categoryDir + rewiki)
+
 ## [1.5.2] - 2026-05-13
 
 
