@@ -2,14 +2,12 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "build": "npm run build -w packages/server && npm run build -w packages/ui && npm run build -w packages/cli && npm run build -w packages/api",
-    "build:core": "npm run build -w packages/server && npm run build -w packages/cli",
-    "build:ui": "npm run build -w packages/ui",
-    "build:api": "npm run build -w packages/api",
+    "build": "npm run build -w packages/core && npm run build -w packages/studio && npm run build -w packages/server && npm run build -w packages/cli",
+    "build:core": "npm run build -w packages/core && npm run build -w packages/server && npm run build -w packages/cli",
+    "build:studio": "npm run build -w packages/studio",
+    "build:ui": "npm run build:ui -w packages/studio",
     "release": "node scripts/release.js",
     "prerelease-check": "bash scripts/pre-release-check.sh",
-    "start-web": "packages/ui/node_modules/.bin/vite packages/ui",
-    "start-api": "packages/api/node_modules/.bin/tsx packages/api/src/index.ts",
-    "dev:ui": "npm run dev -w packages/ui"
+    "dev:ui": "npm run dev:ui -w packages/studio"
   }
 }

@@ -1,0 +1,59 @@
+{
+  "name": "@doquflow/core",
+  "version": "2.0.0",
+  "description": "DocuFlow core — 4 MCP tools and the persistence substrate",
+  "author": "Docuflow <hello@doquflows.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/doquflows/docuflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doquflows/docuflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doquflows/docuflow/issues"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "claude-code",
+    "documentation",
+    "codebase",
+    "developer-tools"
+  ],
+  "main": "./dist/lib.js",
+  "types": "./dist/lib.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/lib.js",
+      "types": "./dist/lib.d.ts"
+    },
+    "./lib": {
+      "require": "./dist/lib.js",
+      "types": "./dist/lib.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "lib": ["./dist/lib.d.ts"]
+    }
+  },
+  "bin": {
+    "docuflow-core": "./dist/index.js"
+  },
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.6"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  }
+}

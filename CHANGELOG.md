@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0] - 2026-05-20
+
+**Package split.** Third milestone of the philosophy reset. `@doquflow/server` becomes a thin back-compat alias; the value pipe lives in new packages `@doquflow/core` (4 MCP tools, minimal) and `@doquflow/studio` (11 advanced tools + UI + REST API). `@doquflow/cli` is now a meta-package depending on both. See [v2.0.0.md](v2.0.0.md) for the full narrative.
+
+### Added
+- feat: `@doquflow/core` package (#28) — irreducible MCP server with the 4 core tools (`query_wiki`, `ingest_source`, `wiki_search`, `read_module`), the extractor, types, filesystem helpers, and 49 unit tests
+- feat: `@doquflow/studio` package (#29) — 11 advanced MCP tools, React web UI, Express REST API; depends on `@doquflow/core`; ships `docuflow-studio` binary registering all 15 tools
+- feat: `docuflow doctor` diagnostic command (#32) — reports installed packages, MCP registrations, workflow detection, recommendations, and wiki health; supports `--json` and `--quiet`
+
+### Changed
+- refactor: `@doquflow/server` is now a 7-line shim re-exporting `@doquflow/studio` (#30) — existing `.mcp.json` registrations keep working, 15 tools still served, package size dropped from ~188 KB → < 5 KB
+- refactor: `@doquflow/cli` meta-package (#31) — drops `@doquflow/server` dependency, depends directly on `@doquflow/core` + `@doquflow/studio`
+- docs: `MIGRATION.md` extended with the v2.0 package layout, install matrix, decision tree, and deprecation timeline
+
+### Bright line
+Zero breakage for existing users. `npm i -g @doquflow/cli` still gives the full surface. Every existing `.mcp.json` registration of `@doquflow/server` continues to work without modification.
+
 ## [1.7.0] - 2026-05-20
 
 **Soft deprecation / core-vs-advanced surface split.** Second milestone of the philosophy reset. Zero command removal — every existing top-level path keeps working. See [v1.7.0.md](v1.7.0.md) for the full narrative.

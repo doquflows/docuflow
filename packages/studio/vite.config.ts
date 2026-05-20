@@ -11,6 +11,11 @@ const apiUrl  = process.env.VITE_API_URL  ?? `http://localhost:${apiPort}`;
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    // Keep UI bundle separate from MCP server's `dist/` (tsc writes to dist/, vite writes to ui-dist/)
+    outDir: 'ui-dist',
+    emptyOutDir: true,
+  },
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
     // Expose resolved API URL to the app at build time

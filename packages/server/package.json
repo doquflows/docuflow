@@ -1,7 +1,7 @@
 {
   "name": "@doquflow/server",
-  "version": "1.7.0",
-  "description": "Docuflow MCP server — lets AI agents read codebases and persist living specs",
+  "version": "2.0.0",
+  "description": "DEPRECATED ALIAS: this package now re-exports @doquflow/studio. New installs should use @doquflow/studio or @doquflow/core. See https://github.com/doquflows/docuflow/blob/main/MIGRATION.md.",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
   "homepage": "https://github.com/doquflows/docuflow",
@@ -28,15 +28,13 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "vitest run"
+    "build": "tsc"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.4"
+    "@doquflow/studio": "2.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "typescript": "^5.6.0",
-    "vitest": "^4.1.6"
+    "typescript": "^5.6.0"
   }
 }
