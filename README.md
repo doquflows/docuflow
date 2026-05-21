@@ -8,6 +8,10 @@
 
 > Updated weekly (Mondays 09:00 UTC) via GitHub Actions
 
+## 📖 Documentation
+
+**[shaifulshabuj.github.io/docuflow-mcp](https://shaifulshabuj.github.io/docuflow-mcp/)** — Full docs site (installation, CLI reference, MCP tools, guides)
+
 **Lets AI agents build persistent, incrementally-maintained knowledge bases using the LLM Wiki pattern.**
 
 ## The problem
