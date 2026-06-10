@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/core",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "DocuFlow core — 4 MCP tools and the persistence substrate",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -34,7 +34,9 @@
   },
   "typesVersions": {
     "*": {
-      "lib": ["./dist/lib.d.ts"]
+      "lib": [
+        "./dist/lib.d.ts"
+      ]
     }
   },
   "bin": {
@@ -55,5 +57,8 @@
   "scripts": {
     "build": "tsc",
     "test": "vitest run"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-darwin-arm64": "^1.1.0"
   }
 }

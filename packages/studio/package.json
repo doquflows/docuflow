@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/studio",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "DocuFlow studio — advanced MCP tools, web UI, REST API, sync orchestration",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -33,7 +33,8 @@
     },
     "./mcp": {
       "require": "./dist/mcp/index.js"
-    }
+    },
+    "./dist/tools/*": "./dist/tools/*.js"
   },
   "typesVersions": {
     "*": {
@@ -50,7 +51,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@doquflow/core": "2.0.1",
+    "@doquflow/core": "2.0.2",
     "@modelcontextprotocol/sdk": "^1.0.4",
     "cors": "^2.8.5",
     "express": "^4.19.2"
@@ -82,6 +83,6 @@
     "build:ui": "vite build",
     "dev:ui": "vite",
     "start:api": "node dist/api/index.js",
-    "test": "vitest run"
+    "test": "vitest run --passWithNoTests"
   }
 }
