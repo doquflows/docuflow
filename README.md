@@ -4,13 +4,9 @@
 [![npm downloads @doquflow/server](https://img.shields.io/npm/dm/@doquflow/server?label=%40doquflow%2Fserver&style=flat-square&color=10b981)](https://www.npmjs.com/package/@doquflow/server)
 [![npm version](https://img.shields.io/npm/v/@doquflow/cli?label=version&style=flat-square&color=374151)](https://www.npmjs.com/package/@doquflow/cli)
 
-![npm download chart](./docs/npm-downloads.svg)
+![npm download chart](./docs/stats/npm-downloads.svg)
 
 > Updated weekly (Mondays 09:00 UTC) via GitHub Actions
-
-## 📖 Documentation
-
-**[shaifulshabuj.github.io/docuflow-mcp](https://shaifulshabuj.github.io/docuflow-mcp/)** — Full docs site (installation, CLI reference, MCP tools, guides)
 
 **Lets AI agents build persistent, incrementally-maintained knowledge bases using the LLM Wiki pattern.**
 

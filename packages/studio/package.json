@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/studio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "DocuFlow studio — advanced MCP tools, web UI, REST API, sync orchestration",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@doquflow/core": "2.0.0",
+    "@doquflow/core": "2.0.1",
     "@modelcontextprotocol/sdk": "^1.0.4",
     "cors": "^2.8.5",
     "express": "^4.19.2"
