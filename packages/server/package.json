@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/server",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "DEPRECATED ALIAS: this package now re-exports @doquflow/studio. New installs should use @doquflow/studio or @doquflow/core. See https://github.com/doquflows/docuflow/blob/main/MIGRATION.md.",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "test": "echo \"No tests in this package\" && exit 0"
   },
   "dependencies": {
-    "@doquflow/studio": "2.0.2"
+    "@doquflow/studio": "2.0.3"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
