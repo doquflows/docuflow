@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/core",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "DocuFlow core — 4 MCP tools and the persistence substrate",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
