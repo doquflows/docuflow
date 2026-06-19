@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/studio",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "DocuFlow studio — advanced MCP tools, web UI, REST API, sync orchestration",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -55,11 +55,13 @@
     "README.md"
   ],
   "dependencies": {
-    "@doquflow/core": "2.1.0",
+    "@doquflow/core": "2.2.0",
     "@modelcontextprotocol/sdk": "^1.0.4",
+    "@xenova/transformers": "^2.17.2",
+    "better-sqlite3": "^11.0.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "better-sqlite3": "^11.0.0"
+    "sqlite-vec": "^0.1.9"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",

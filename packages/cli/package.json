@@ -1,6 +1,6 @@
 {
   "name": "@doquflow/cli",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "CLI for setting up Docuflow in your project",
   "author": "Docuflow <hello@doquflows.dev>",
   "license": "MIT",
@@ -35,8 +35,8 @@
     "test": "echo \"No tests in this package\" && exit 0"
   },
   "dependencies": {
-    "@doquflow/core": "2.1.0",
-    "@doquflow/studio": "2.1.0",
+    "@doquflow/core": "2.2.0",
+    "@doquflow/studio": "2.2.0",
     "cors": "^2.8.5",
     "express": "^4.19.2"
   },
