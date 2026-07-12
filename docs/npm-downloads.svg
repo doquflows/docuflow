@@ -17,63 +17,63 @@
       stroke="#e5e7eb" stroke-width="1"/>
     <text x="56" y="224.0" text-anchor="end" dominant-baseline="middle"
       font-size="11" fill="#6b7280">0</text>
-    <line x1="64" y1="180.1" x2="836" y2="180.1"
+    <line x1="64" y1="179.7" x2="836" y2="179.7"
       stroke="#e5e7eb" stroke-width="1"/>
-    <text x="56" y="180.1" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">124</text>
-    <line x1="64" y1="135.8" x2="836" y2="135.8"
+    <text x="56" y="179.7" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">42</text>
+    <line x1="64" y1="135.5" x2="836" y2="135.5"
       stroke="#e5e7eb" stroke-width="1"/>
-    <text x="56" y="135.8" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">249</text>
-    <line x1="64" y1="91.9" x2="836" y2="91.9"
+    <text x="56" y="135.5" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">84</text>
+    <line x1="64" y1="92.3" x2="836" y2="92.3"
       stroke="#e5e7eb" stroke-width="1"/>
-    <text x="56" y="91.9" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">373</text>
+    <text x="56" y="92.3" text-anchor="end" dominant-baseline="middle"
+      font-size="11" fill="#6b7280">125</text>
     <line x1="64" y1="48.0" x2="836" y2="48.0"
       stroke="#e5e7eb" stroke-width="1"/>
     <text x="56" y="48.0" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">497</text>
+      font-size="11" fill="#6b7280">167</text>
 
   <!-- Areas -->
   
-    <polygon points="64.0,48.0 90.6,212.7 117.2,220.1 143.9,220.1 170.5,224.0 197.1,220.5 223.7,219.4 250.3,171.6 277.0,164.9 303.6,218.7 330.2,220.5 356.8,209.1 383.4,222.6 410.1,223.6 436.7,209.1 463.3,221.5 489.9,223.3 516.6,220.1 543.2,223.6 569.8,223.3 596.4,206.3 623.0,219.4 649.7,206.3 676.3,223.6 702.9,221.5 729.5,222.9 756.1,223.3 782.8,220.8 809.4,224.0 836.0,218.7 836.0,224.0 64.0,224.0" fill="url(#grad0)"/>
-    <polygon points="64.0,61.8 90.6,213.7 117.2,220.5 143.9,220.5 170.5,224.0 197.1,220.1 223.7,222.2 250.3,178.0 277.0,167.0 303.6,208.1 330.2,222.2 356.8,209.1 383.4,223.3 410.1,224.0 436.7,209.1 463.3,221.5 489.9,222.2 516.6,221.9 543.2,222.6 569.8,224.0 596.4,210.2 623.0,221.2 649.7,222.2 676.3,222.9 702.9,222.9 729.5,222.6 756.1,222.9 782.8,220.1 809.4,224.0 836.0,219.0 836.0,224.0 64.0,224.0" fill="url(#grad1)"/>
+    <polygon points="64.0,190.3 90.6,212.4 117.2,212.4 143.9,224.0 170.5,213.5 197.1,210.3 223.7,68.0 250.3,48.0 277.0,208.2 303.6,213.5 330.2,179.7 356.8,219.8 383.4,222.9 410.1,179.7 436.7,216.6 463.3,221.9 489.9,212.4 516.6,222.9 543.2,221.9 569.8,171.3 596.4,210.3 623.0,171.3 649.7,222.9 676.3,216.6 702.9,220.8 729.5,221.9 756.1,214.5 782.8,224.0 809.4,208.2 836.0,214.5 836.0,224.0 64.0,224.0" fill="url(#grad0)"/>
+    <polygon points="64.0,193.4 90.6,213.5 117.2,213.5 143.9,224.0 170.5,212.4 197.1,218.7 223.7,87.0 250.3,54.3 277.0,176.6 303.6,218.7 330.2,179.7 356.8,221.9 383.4,224.0 410.1,179.7 436.7,216.6 463.3,218.7 489.9,217.7 516.6,219.8 543.2,224.0 569.8,182.9 596.4,215.6 623.0,218.7 649.7,220.8 676.3,220.8 702.9,219.8 729.5,220.8 756.1,212.4 782.8,224.0 809.4,209.2 836.0,222.9 836.0,224.0 64.0,224.0" fill="url(#grad1)"/>
 
   <!-- Lines -->
   
-    <polyline points="64.0,48.0 90.6,212.7 117.2,220.1 143.9,220.1 170.5,224.0 197.1,220.5 223.7,219.4 250.3,171.6 277.0,164.9 303.6,218.7 330.2,220.5 356.8,209.1 383.4,222.6 410.1,223.6 436.7,209.1 463.3,221.5 489.9,223.3 516.6,220.1 543.2,223.6 569.8,223.3 596.4,206.3 623.0,219.4 649.7,206.3 676.3,223.6 702.9,221.5 729.5,222.9 756.1,223.3 782.8,220.8 809.4,224.0 836.0,218.7"
+    <polyline points="64.0,190.3 90.6,212.4 117.2,212.4 143.9,224.0 170.5,213.5 197.1,210.3 223.7,68.0 250.3,48.0 277.0,208.2 303.6,213.5 330.2,179.7 356.8,219.8 383.4,222.9 410.1,179.7 436.7,216.6 463.3,221.9 489.9,212.4 516.6,222.9 543.2,221.9 569.8,171.3 596.4,210.3 623.0,171.3 649.7,222.9 676.3,216.6 702.9,220.8 729.5,221.9 756.1,214.5 782.8,224.0 809.4,208.2 836.0,214.5"
       fill="none" stroke="#6366f1" stroke-width="2.2"
       stroke-linejoin="round" stroke-linecap="round"/>
-    <polyline points="64.0,61.8 90.6,213.7 117.2,220.5 143.9,220.5 170.5,224.0 197.1,220.1 223.7,222.2 250.3,178.0 277.0,167.0 303.6,208.1 330.2,222.2 356.8,209.1 383.4,223.3 410.1,224.0 436.7,209.1 463.3,221.5 489.9,222.2 516.6,221.9 543.2,222.6 569.8,224.0 596.4,210.2 623.0,221.2 649.7,222.2 676.3,222.9 702.9,222.9 729.5,222.6 756.1,222.9 782.8,220.1 809.4,224.0 836.0,219.0"
+    <polyline points="64.0,193.4 90.6,213.5 117.2,213.5 143.9,224.0 170.5,212.4 197.1,218.7 223.7,87.0 250.3,54.3 277.0,176.6 303.6,218.7 330.2,179.7 356.8,221.9 383.4,224.0 410.1,179.7 436.7,216.6 463.3,218.7 489.9,217.7 516.6,219.8 543.2,224.0 569.8,182.9 596.4,215.6 623.0,218.7 649.7,220.8 676.3,220.8 702.9,219.8 729.5,220.8 756.1,212.4 782.8,224.0 809.4,209.2 836.0,222.9"
       fill="none" stroke="#10b981" stroke-width="2.2"
       stroke-linejoin="round" stroke-linecap="round"/>
 
   <!-- X axis labels -->
   
     <text x="64.0" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jun 11</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jun 12</text>
     <text x="197.1" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jun 16</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jun 17</text>
     <text x="330.2" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jun 21</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jun 22</text>
     <text x="463.3" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jun 26</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jun 27</text>
     <text x="596.4" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jul 1</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jul 2</text>
     <text x="729.5" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jul 6</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jul 7</text>
     <text x="836.0" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jul 10</text>
+      text-anchor="middle" font-size="11" fill="#6b7280">Jul 11</text>
 
   <!-- End-point dots -->
   
-    <circle cx="836.0" cy="218.7" r="4"
+    <circle cx="836.0" cy="214.5" r="4"
       fill="#6366f1" stroke="#fff" stroke-width="2">
-      <title>15 downloads</title>
+      <title>9 downloads</title>
     </circle>
-    <circle cx="836.0" cy="219.0" r="4"
+    <circle cx="836.0" cy="222.9" r="4"
       fill="#10b981" stroke="#fff" stroke-width="2">
-      <title>14 downloads</title>
+      <title>1 downloads</title>
     </circle>
 
   <!-- Legend (top-left) -->
@@ -83,14 +83,14 @@
       @doquflow/cli
     </text>
     <text x="82" y="36" font-size="11" fill="#6b7280">
-      1,176 last 30 days
+      688 last 30 days
     </text>
     <rect x="284" y="12" width="12" height="12" rx="3" fill="#10b981"/>
     <text x="302" y="22" font-size="13" fill="#374151" font-weight="600">
       @doquflow/server
     </text>
     <text x="302" y="36" font-size="11" fill="#6b7280">
-      1,062 last 30 days
+      605 last 30 days
     </text>
 
   <!-- Updated timestamp (bottom-right) -->
