@@ -62,7 +62,7 @@ Docuflow v2.0 is split into focused packages:
 
 ## Migrating from v1.x
 
-See [MIGRATION.md](https://github.com/shaifulshabuj/docuflow-mcp/blob/main/MIGRATION.md) for the full upgrade guide.
+See [MIGRATION.md](https://github.com/doquflows/docuflow/blob/main/MIGRATION.md) for the full upgrade guide.
 
 **Short version:** `npm install -g @doquflow/cli` — no config changes needed.
 

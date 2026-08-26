@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@doquflow/cli?label=version&style=flat-square&color=6366f1)](https://www.npmjs.com/package/@doquflow/cli)
 [![npm downloads](https://img.shields.io/npm/dm/@doquflow/cli?label=downloads&style=flat-square&color=10b981)](https://www.npmjs.com/package/@doquflow/cli)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://github.com/shaifulshabuj/docuflow-mcp/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://github.com/doquflows/docuflow/blob/main/LICENSE)
 
 ---
 

@@ -85,4 +85,4 @@ Internal maintenance release.
 
 ---
 
-[Full changelog →](https://github.com/shaifulshabuj/docuflow-mcp/blob/main/CHANGELOG.md)
+[Full changelog →](https://github.com/doquflows/docuflow/blob/main/CHANGELOG.md)

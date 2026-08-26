@@ -134,7 +134,7 @@ What does get_schema_guidance recommend for this project?
 
 ## Waymark security integration (optional)
 
-[Waymark](https://github.com/shaifulshabuj/waymark) is a security policy enforcement layer for MCP-based AI agents. When Waymark is configured alongside Docuflow:
+[Waymark](https://github.com/waymarks/waymark) is a security policy enforcement layer for MCP-based AI agents. When Waymark is configured alongside Docuflow:
 
 - File and shell operations go through Waymark for policy enforcement
 - Sensitive paths (`.env`, secrets) are blocked automatically
@@ -142,4 +142,4 @@ What does get_schema_guidance recommend for this project?
 - Sensitive operations require human approval via the Waymark dashboard
 - Full audit trail of every AI action
 
-See the [Waymark documentation](https://github.com/shaifulshabuj/waymark) for setup.
+See the [Waymark documentation](https://github.com/waymarks/waymark) for setup.
