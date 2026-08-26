@@ -2,7 +2,7 @@ site_name: Docuflow
 site_description: Lets AI agents build persistent, incrementally-maintained knowledge bases using the LLM Wiki pattern.
 site_url: https://shaifulshabuj.github.io/docuflow-mcp/
 repo_url: https://github.com/doquflows/docuflow
-repo_name: shaifulshabuj/docuflow-mcp
+repo_name: doquflows/docuflow
 edit_uri: edit/main/mkdocs-docs/
 
 docs_dir: mkdocs-docs
