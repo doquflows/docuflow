@@ -1,5 +1,14 @@
 # Docuflow Changelog
 
+## [2.3.0] - 2026-08-27
+
+### Changed
+- **Licence:** relicensed from MIT to a proprietary freeware licence. The software remains free to
+  use, with no warranty and at the user's own risk; redistribution, resale, modification and rights
+  in the source code are not granted. Versions published before 2026-08-27 remain under the MIT Licence.
+- Source development moved to a private repository. This repository's public counterpart now carries
+  documentation only.
+
 ## [2.2.0] - 2026-06-19
 
 ### Added
