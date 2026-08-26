@@ -1,0 +1,56 @@
+:root {
+  --md-primary-fg-color: #6366f1;
+  --md-primary-fg-color--light: #818cf8;
+  --md-primary-fg-color--dark: #4f46e5;
+  --md-accent-fg-color: #6366f1;
+}
+
+/* Hero section */
+.hero {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero-badges {
+  margin-bottom: 1.5rem;
+}
+
+.hero-badges img {
+  margin: 0 0.25rem;
+}
+
+/* Feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.25rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.feature-card:hover {
+  border-color: var(--md-primary-fg-color);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* Package badges */
+.package-badge {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  background: var(--md-primary-fg-color);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  margin-right: 0.25rem;
+}
