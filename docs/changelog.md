@@ -1,10 +1,20 @@
 # Changelog
 
-All notable changes to Docuflow are documented here. Format: [Keep a Changelog](https://keepachangelog.com/).
+All notable changes to Docuflow are documented here. Format: [Keep a Changelog](https://keepachangelog.com/). Release notes for each version, with links to the published npm packages, are on the [releases page](https://github.com/doquflows/docuflow/releases).
 
 ---
 
-## [Unreleased]
+## [2.3.0] — 2026-08-27
+
+**Docuflow is now proprietary freeware.** It stays free to use, with no warranty and at your own risk. Redistribution, resale, modification and rights in the source code are not granted. Versions published before 2026-08-27 remain under the MIT Licence. Source development has moved to a private repository; this site and the public repository carry documentation only.
+
+### Added
+- **Claim citation gate in `lint_wiki`** — assertions written as `> ASSERT:` in wiki pages must now carry a `CITE[<id>]` tag resolving to a `CLAIM[<id>]` declared in `.docuflow/sources/`. The new `unverified_claim` issue type flags both missing citations and citations pointing at claim IDs that do not exist. Reachable via `check_type: "claims"` or `"all"`, reported at high severity, and surfaced in the recommendations output.
+
+### Changed
+- **Licence:** relicensed from MIT to a proprietary freeware licence, as described above.
+
+## [2.2.0] — 2026-06-19
 
 ### Added
 - **`context` tool: semantic and hybrid search modes** — the `context` tool now supports a `mode` parameter (`lexical`, `semantic`, `hybrid`). Semantic search uses local vector embeddings via `@xenova/transformers` (all-MiniLM-L6-v2) and `sqlite-vec` for cosine similarity retrieval. Hybrid mode combines FTS5 keyword results with vector results. Default remains `lexical` (backward-compatible). No cloud API key required — fully local-first.
@@ -18,6 +28,11 @@ All notable changes to Docuflow are documented here. Format: [Keep a Changelog](
 - **`context` MCP schema** — the `mode` parameter is now exposed in the MCP `inputSchema` so clients can discover and use it.
 
 ---
+
+## [2.1.0] — 2026-06-18
+
+### Added
+- **`context` Context-as-a-Service tool** — a new tool under `@doquflow/studio` providing persistent local SQLite FTS5 indexing with `index` and `query` operations.
 
 ## [2.0.0] — 2026-05-20
 
@@ -85,4 +100,4 @@ Internal maintenance release.
 
 ---
 
-[Full changelog →](https://github.com/doquflows/docuflow/blob/main/CHANGELOG.md)
+[Full changelog →](https://github.com/shaifulshabuj/docuflow-mcp/blob/main/CHANGELOG.md)
