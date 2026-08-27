@@ -129,25 +129,25 @@ function generateSVG(datasets, updatedAt) {
     const y = scaleY(v).toFixed(1);
     return `
     <line x1="${PAD.left}" y1="${y}" x2="${W - PAD.right}" y2="${y}"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="${PAD.left - 8}" y="${y}" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">${v >= 1000 ? (v / 1000).toFixed(1) + 'k' : v}</text>`;
+      font-size="11" class="lbl">${v >= 1000 ? (v / 1000).toFixed(1) + 'k' : v}</text>`;
   }).join('');
 
   // X-axis labels
   const xAxis = xLabels.map(({ date, i }) => `
     <text x="${scaleX(i).toFixed(1)}" y="${PAD.top + chartH + 18}"
-      text-anchor="middle" font-size="11" fill="#6b7280">${fmtDate(date)}</text>`).join('');
+      text-anchor="middle" font-size="11" class="lbl">${fmtDate(date)}</text>`).join('');
 
   // Legend
   const legendItems = series.map((s, i) => {
     const x = PAD.left + i * 220;
     return `
     <rect x="${x}" y="12" width="12" height="12" rx="3" fill="${s.color}"/>
-    <text x="${x + 18}" y="22" font-size="13" fill="#374151" font-weight="600">
+    <text x="${x + 18}" y="22" font-size="13" class="legend" font-weight="600">
       ${s.label}
     </text>
-    <text x="${x + 18}" y="36" font-size="11" fill="#6b7280">
+    <text x="${x + 18}" y="36" font-size="11" class="lbl">
       ${s.total.toLocaleString()} last 30 days
     </text>`;
   }).join('');
@@ -155,12 +155,35 @@ function generateSVG(datasets, updatedAt) {
   // Hover dots (last point)
   const endDots = dots.map(d => `
     <circle cx="${d.x.toFixed(1)}" cy="${d.y.toFixed(1)}" r="4"
-      fill="${d.color}" stroke="#fff" stroke-width="2">
+      fill="${d.color}" class="dot" stroke-width="2">
       <title>${d.val} downloads</title>
     </circle>`).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}"
-  viewBox="0 0 ${W} ${H}" style="background:#fff;border-radius:12px;font-family:system-ui,sans-serif">
+  viewBox="0 0 ${W} ${H}" style="border-radius:12px;font-family:system-ui,sans-serif">
+  <style><![CDATA[
+    /* Rendered as an img element, so prefers-color-scheme is evaluated by the
+       viewer's browser — this keeps the chart legible on GitHub's dark theme
+       instead of showing a white slab. CDATA because SVG style content is
+       parsed as markup otherwise. */
+    .bg{fill:#ffffff}
+    .grid{stroke:#e5e7eb}
+    .axis{stroke:#d1d5db}
+    .lbl{fill:#6b7280}
+    .legend{fill:#374151}
+    .foot{fill:#9ca3af}
+    .dot{stroke:#ffffff}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117}
+      .grid{stroke:#30363d}
+      .axis{stroke:#3d444d}
+      .lbl{fill:#9198a1}
+      .legend{fill:#e6edf3}
+      .foot{fill:#7d8590}
+      .dot{stroke:#0d1117}
+    }
+  ]]></style>
+  <rect class="bg" x="0" y="0" width="${W}" height="${H}" rx="12"/>
   <defs>${gradientDefs}
   </defs>
 
@@ -184,13 +207,13 @@ function generateSVG(datasets, updatedAt) {
 
   <!-- Updated timestamp (bottom-right) -->
   <text x="${W - PAD.right}" y="${H - 8}" text-anchor="end"
-    font-size="10" fill="#9ca3af">Updated ${updatedAt}</text>
+    font-size="10" class="foot">Updated ${updatedAt}</text>
 
   <!-- Axes -->
   <line x1="${PAD.left}" y1="${PAD.top}" x2="${PAD.left}" y2="${PAD.top + chartH}"
-    stroke="#d1d5db" stroke-width="1"/>
+    class="axis" stroke-width="1"/>
   <line x1="${PAD.left}" y1="${PAD.top + chartH}" x2="${W - PAD.right}" y2="${PAD.top + chartH}"
-    stroke="#d1d5db" stroke-width="1"/>
+    class="axis" stroke-width="1"/>
 </svg>`;
 }
 
