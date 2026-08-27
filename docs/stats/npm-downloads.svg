@@ -1,5 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="280"
-  viewBox="0 0 860 280" style="background:#fff;border-radius:12px;font-family:system-ui,sans-serif">
+  viewBox="0 0 860 280" style="border-radius:12px;font-family:system-ui,sans-serif">
+  <style><![CDATA[
+    /* Rendered as an img element, so prefers-color-scheme is evaluated by the
+       viewer's browser — this keeps the chart legible on GitHub's dark theme
+       instead of showing a white slab. CDATA because SVG style content is
+       parsed as markup otherwise. */
+    .bg{fill:#ffffff}
+    .grid{stroke:#e5e7eb}
+    .axis{stroke:#d1d5db}
+    .lbl{fill:#6b7280}
+    .legend{fill:#374151}
+    .foot{fill:#9ca3af}
+    .dot{stroke:#ffffff}
+    @media (prefers-color-scheme:dark){
+      .bg{fill:#0d1117}
+      .grid{stroke:#30363d}
+      .axis{stroke:#3d444d}
+      .lbl{fill:#9198a1}
+      .legend{fill:#e6edf3}
+      .foot{fill:#7d8590}
+      .dot{stroke:#0d1117}
+    }
+  ]]></style>
+  <rect class="bg" x="0" y="0" width="860" height="280" rx="12"/>
   <defs>
     <linearGradient id="grad0" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#818cf8" stop-opacity="0.35"/>
@@ -18,25 +41,25 @@
   <!-- Y grid + labels -->
   
     <line x1="64" y1="224.0" x2="836" y2="224.0"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="56" y="224.0" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">0</text>
+      font-size="11" class="lbl">0</text>
     <line x1="64" y1="181.1" x2="836" y2="181.1"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="56" y="181.1" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">10</text>
+      font-size="11" class="lbl">10</text>
     <line x1="64" y1="133.9" x2="836" y2="133.9"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="56" y="133.9" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">21</text>
+      font-size="11" class="lbl">21</text>
     <line x1="64" y1="90.9" x2="836" y2="90.9"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="56" y="90.9" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">31</text>
+      font-size="11" class="lbl">31</text>
     <line x1="64" y1="48.0" x2="836" y2="48.0"
-      stroke="#e5e7eb" stroke-width="1"/>
+      class="grid" stroke-width="1"/>
     <text x="56" y="48.0" text-anchor="end" dominant-baseline="middle"
-      font-size="11" fill="#6b7280">41</text>
+      font-size="11" class="lbl">41</text>
 
   <!-- Areas -->
   
@@ -59,66 +82,66 @@
   <!-- X axis labels -->
   
     <text x="64.0" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Jul 27</text>
+      text-anchor="middle" font-size="11" class="lbl">Jul 27</text>
     <text x="197.1" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 1</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 1</text>
     <text x="330.2" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 6</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 6</text>
     <text x="463.3" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 11</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 11</text>
     <text x="596.4" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 16</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 16</text>
     <text x="729.5" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 21</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 21</text>
     <text x="836.0" y="242"
-      text-anchor="middle" font-size="11" fill="#6b7280">Aug 25</text>
+      text-anchor="middle" font-size="11" class="lbl">Aug 25</text>
 
   <!-- End-point dots -->
   
     <circle cx="836.0" cy="206.8" r="4"
-      fill="#6366f1" stroke="#fff" stroke-width="2">
+      fill="#6366f1" class="dot" stroke-width="2">
       <title>4 downloads</title>
     </circle>
     <circle cx="836.0" cy="219.7" r="4"
-      fill="#10b981" stroke="#fff" stroke-width="2">
+      fill="#10b981" class="dot" stroke-width="2">
       <title>1 downloads</title>
     </circle>
     <circle cx="836.0" cy="219.7" r="4"
-      fill="#f59e0b" stroke="#fff" stroke-width="2">
+      fill="#f59e0b" class="dot" stroke-width="2">
       <title>1 downloads</title>
     </circle>
 
   <!-- Legend (top-left) -->
   
     <rect x="64" y="12" width="12" height="12" rx="3" fill="#6366f1"/>
-    <text x="82" y="22" font-size="13" fill="#374151" font-weight="600">
+    <text x="82" y="22" font-size="13" class="legend" font-weight="600">
       @doquflow/cli
     </text>
-    <text x="82" y="36" font-size="11" fill="#6b7280">
+    <text x="82" y="36" font-size="11" class="lbl">
       122 last 30 days
     </text>
     <rect x="284" y="12" width="12" height="12" rx="3" fill="#10b981"/>
-    <text x="302" y="22" font-size="13" fill="#374151" font-weight="600">
+    <text x="302" y="22" font-size="13" class="legend" font-weight="600">
       @doquflow/core
     </text>
-    <text x="302" y="36" font-size="11" fill="#6b7280">
+    <text x="302" y="36" font-size="11" class="lbl">
       59 last 30 days
     </text>
     <rect x="504" y="12" width="12" height="12" rx="3" fill="#f59e0b"/>
-    <text x="522" y="22" font-size="13" fill="#374151" font-weight="600">
+    <text x="522" y="22" font-size="13" class="legend" font-weight="600">
       @doquflow/studio
     </text>
-    <text x="522" y="36" font-size="11" fill="#6b7280">
+    <text x="522" y="36" font-size="11" class="lbl">
       32 last 30 days
     </text>
 
   <!-- Updated timestamp (bottom-right) -->
   <text x="836" y="272" text-anchor="end"
-    font-size="10" fill="#9ca3af">Updated 2026-08-27</text>
+    font-size="10" class="foot">Updated 2026-08-27</text>
 
   <!-- Axes -->
   <line x1="64" y1="48" x2="64" y2="224"
-    stroke="#d1d5db" stroke-width="1"/>
+    class="axis" stroke-width="1"/>
   <line x1="64" y1="224" x2="836" y2="224"
-    stroke="#d1d5db" stroke-width="1"/>
+    class="axis" stroke-width="1"/>
 </svg>
