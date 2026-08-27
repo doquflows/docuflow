@@ -14,7 +14,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PACKAGES = ['@doquflow/cli', '@doquflow/core', '@doquflow/studio'];
-const OUTPUT_PATH = path.join(__dirname, '..', 'docs', 'stats', 'npm-downloads.svg');
+const OUTPUT_PATH = path.join(__dirname, '..', 'assets', 'npm-downloads.svg');
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
