@@ -83,7 +83,9 @@ Start with four: `query_wiki`, `ingest_source`, `wiki_search`, `read_module`.
 
 ## Releases
 
-Current release: **v2.3.0** — see the [changelog](https://shaifulshabuj.github.io/docuflow-mcp/latest/changelog/) or [CHANGELOG.md](CHANGELOG.md).
+Every release is published on the [releases page](https://github.com/doquflows/docuflow/releases) with its notes and links to the npm packages for that version. The [changelog](https://shaifulshabuj.github.io/docuflow-mcp/latest/changelog/) on the documentation site carries the same history in one page.
+
+Installing `@doquflow/cli` always gives you the current release.
 
 ---
 
