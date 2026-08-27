@@ -1,6 +1,26 @@
 # Docuflow Changelog
 
+## [2.3.1] - 2026-08-27
+
+### Fixed
+- **The package README stated the wrong licence.** The README shipped inside `@doquflow/cli` is what
+  npmjs.com renders on the package page, and it still said the project was MIT licensed.
+  `package.json` already declared `SEE LICENSE IN LICENSE`, so npm's sidebar was correct while the
+  page body contradicted it. It now states the proprietary freeware terms.
+
 ## [2.3.0] - 2026-08-27
+
+### Added
+- **Claim citation gate in `lint_wiki`.** Assertions written as `> ASSERT:` in wiki pages must now
+  carry a `CITE[<id>]` tag resolving to a `CLAIM[<id>]` declared in `.docuflow/sources/`. The new
+  `unverified_claim` issue type flags both missing citations and citations pointing at claim IDs
+  that do not exist. Available via `check_type: "claims"` or `"all"`, reported at high severity,
+  and surfaced in the recommendations output.
+
+### Fixed
+- `extractor-rules.test.ts` was missing its vitest imports, so the file failed to load and silently
+  contributed no tests. Restoring the import brings 49 previously-skipped tests back into the suite
+  (7 → 56 passing).
 
 ### Changed
 - **Licence:** relicensed from MIT to a proprietary freeware licence. The software remains free to
