@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Database & Runtime
+*.db
+*.db-journal
+.context.db
+.context.db-journal
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Docuflow runtime output
+.docuflow/*
+!.docuflow/sources/
+.docuflow/sources/*
+!.docuflow/sources/samples/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test coverage & Temporary
+coverage/
+tmp/
+temp/

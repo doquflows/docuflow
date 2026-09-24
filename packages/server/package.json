@@ -1,0 +1,41 @@
+{
+  "name": "@doquflow/server",
+  "version": "2.3.1",
+  "description": "DEPRECATED ALIAS: this package now re-exports @doquflow/studio. New installs should use @doquflow/studio or @doquflow/core. See https://github.com/doquflows/docuflow/blob/main/MIGRATION.md.",
+  "author": "Docuflow <hello@doquflows.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/doquflows/docuflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doquflows/docuflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doquflows/docuflow/issues"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "claude-code",
+    "documentation",
+    "codebase",
+    "developer-tools"
+  ],
+  "bin": {
+    "docuflow-server": "./dist/index.js"
+  },
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests in this package\" && exit 0"
+  },
+  "dependencies": {
+    "@doquflow/studio": "2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

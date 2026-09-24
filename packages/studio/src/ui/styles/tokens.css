@@ -1,0 +1,83 @@
+/* DocuFlow Design Tokens
+   Single source of truth for color, type, spacing, motion.
+   Map these directly to Tailwind theme / CSS-in-JS theme / CSS vars. */
+
+:root {
+  /* ── Surfaces (dark chrome) ─────────────────────────── */
+  --df-bg:          #0a0a0b;
+  --df-surface:     #111113;
+  --df-surface-2:   #161619;
+  --df-surface-3:   #1d1d22;
+  --df-border:      #1a1a1f;
+  --df-border-2:    #26262c;
+  --df-border-3:    #2c2c33;
+  --df-border-hi:   #3a3a44;
+
+  /* ── Text ───────────────────────────────────────────── */
+  --df-text:        #ededee;   /* primary */
+  --df-text-2:      #d4d4d8;   /* prose body */
+  --df-text-3:      #a1a1aa;   /* secondary */
+  --df-text-4:      #6b6b74;   /* tertiary, captions */
+  --df-text-5:      #3e3e48;   /* dimmer label — rail group headings */
+
+  /* ── Surfaces (interactive) ─────────────────────────── */
+  --df-bg-hover:    rgba(255,255,255,.04);  /* subtle list-item hover */
+
+  /* ── Accent (Indigo) ────────────────────────────────── */
+  --df-accent:        #6366f1;
+  --df-accent-hover:  #5558e3;
+  --df-accent-2:      #818cf8;
+  --df-accent-text:   #a5b4fc;
+  --df-accent-soft:   rgba(99,102,241,.14);
+  --df-accent-glow:   rgba(99,102,241,.18);
+  --df-accent-ring:   rgba(99,102,241,.4);
+  --df-accent-halo:   rgba(99,102,241,.08);
+
+  /* ── Status ─────────────────────────────────────────── */
+  --df-green:       #10b981;
+  --df-green-text:  #34d399;
+  --df-green-soft:  rgba(16,185,129,.12);
+  --df-green-ring:  rgba(16,185,129,.3);
+  --df-amber:       #f59e0b;
+  --df-amber-text:  #fbbf24;
+  --df-amber-soft:  rgba(245,158,11,.12);
+  --df-amber-ring:  rgba(245,158,11,.3);
+  --df-red:         #ef4444;
+  --df-red-text:    #f87171;
+  --df-red-soft:    rgba(239,68,68,.12);
+  --df-red-ring:    rgba(239,68,68,.3);
+  --df-pink:        #ec4899;
+  --df-pink-text:   #f472b6;
+  --df-pink-soft:   rgba(236,72,153,.12);
+  --df-pink-ring:   rgba(236,72,153,.3);
+
+  /* ── Typography ─────────────────────────────────────── */
+  --df-font-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --df-font-serif:  'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --df-font-mono:   'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ── Radii ──────────────────────────────────────────── */
+  --df-r-sm: 4px;    /* pills, kbd */
+  --df-r-md: 6px;    /* buttons, inputs */
+  --df-r-lg: 8px;    /* small cards */
+  --df-r-xl: 10px;   /* large cards, query box */
+  --df-r-pill: 999px;
+
+  /* ── Sizing ─────────────────────────────────────────── */
+  --df-h-btn:   28px;
+  --df-h-input: 30px;
+  --df-h-bar:   44px;
+  --df-w-rail:  60px;
+  --df-w-rail-detail: 280px;
+  --df-w-tree: 260px;
+
+  /* ── Motion ─────────────────────────────────────────── */
+  --df-ease:  cubic-bezier(.2,.7,.3,1);
+  --df-fast:  120ms;
+  --df-base:  200ms;
+  --df-slow:  350ms;
+
+  /* ── Layout ─────────────────────────────────────────── */
+  --df-content-max: 720px;     /* answer / wiki body */
+  --df-content-pad: 56px;      /* outer page padding */
+}

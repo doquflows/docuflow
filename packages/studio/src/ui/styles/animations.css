@@ -1,0 +1,21 @@
+/* DocuFlow animation primitives. */
+
+@keyframes df-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes df-spin   { to { transform: rotate(360deg); } }
+@keyframes df-pulse  { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+@keyframes df-blink  { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+@keyframes df-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes df-bar-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes df-page-enter {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.df-anim-fade   { animation: df-fade-in var(--df-base) var(--df-ease) both; }
+.df-anim-page   { animation: df-page-enter var(--df-slow) var(--df-ease) both; }

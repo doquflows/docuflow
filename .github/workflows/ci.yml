@@ -1,0 +1,173 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build & Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: TypeScript build (both packages)
+        run: npm run build
+
+      - name: Unit tests
+        # Gate CI on the vitest suite. Without this step a test file that
+        # fails to even load contributes zero tests and CI stays green —
+        # which is how extractor-rules.test.ts hid 49 tests.
+        run: npx vitest run
+
+      - name: Verify compiled dist files
+        run: |
+          echo "Checking CLI dist commands..."
+          for cmd in init init-interactive status suggest watch watch-stop sync; do
+            test -f "packages/cli/dist/commands/${cmd}.js" \
+              && echo "  ✓ ${cmd}.js" \
+              || (echo "  ✗ MISSING: ${cmd}.js" && exit 1)
+          done
+          echo "Checking server dist..."
+          test -f packages/server/dist/index.js && echo "  ✓ server/dist/index.js" || exit 1
+          test -f packages/cli/dist/index.js    && echo "  ✓ cli/dist/index.js"    || exit 1
+
+      - name: Secrets scan
+        run: |
+          # Scan for actual secret VALUES (not env var names):
+          # sk-ant-... = real Anthropic key | npm_... = real npm token
+          if grep -r "sk-ant-\|npm_[A-Za-z0-9]\{20,\}" \
+            packages/ --include="*.ts" \
+            | grep -v "// \|process\.env\|env\.\|placeholder\|example"; then
+            echo "FAIL: Possible hardcoded secret found in source"
+            exit 1
+          fi
+          echo "PASS: No hardcoded secrets found"
+
+  smoke-test:
+    name: CLI Smoke Tests
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install & build
+        run: npm install && npm run build
+
+      - name: Initialize DocuFlow
+        run: |
+          mkdir -p .docuflow/sources .docuflow/wiki/entities .docuflow/wiki/concepts \
+                   .docuflow/wiki/timelines .docuflow/wiki/syntheses .docuflow/specs
+          echo "# Wiki Index" > .docuflow/index.md
+          echo "# Operation Log" > .docuflow/log.md
+          printf '# DocuFlow Schema\n\n## Domain\nCode/Architecture\n' > .docuflow/schema.md
+          echo "# Test Source\n\n**TestEntity** is a sample entity for CI testing.\n" \
+            > .docuflow/sources/test.md
+
+      - name: sync (basic)
+        run: node packages/cli/dist/index.js sync --no-lint --quiet
+        working-directory: ${{ github.workspace }}
+
+      - name: sync --source (single file)
+        run: node packages/cli/dist/index.js sync --source test.md --no-lint
+        working-directory: ${{ github.workspace }}
+
+      - name: sync --fail-on-score (threshold check)
+        run: |
+          # Should exit 0 — score after basic ingest is typically ≥50
+          node packages/cli/dist/index.js sync --fail-on-score 10 --no-lint --quiet
+        working-directory: ${{ github.workspace }}
+
+      - name: watch status (no daemon)
+        run: |
+          OUT=$(node packages/cli/dist/index.js watch status)
+          echo "$OUT"
+          echo "$OUT" | grep -q "stopped\|running"
+        working-directory: ${{ github.workspace }}
+
+      - name: watch stop (no daemon — graceful)
+        run: node packages/cli/dist/index.js watch stop
+        working-directory: ${{ github.workspace }}
+
+      - name: watch stale PID cleanup
+        run: |
+          echo '{"pid":99999999,"started_at":"2026-01-01T00:00:00.000Z","bridge":"copilot","project_path":"'$PWD'","options":{"ai":true,"forceCopilot":true,"forceClaude":false,"forceCodex":false,"lintIntervalHours":24}}' \
+            > .docuflow/watch.pid
+          node packages/cli/dist/index.js watch status | grep -q "stale\|died"
+          test ! -f .docuflow/watch.pid && echo "✓ stale PID cleaned up"
+        working-directory: ${{ github.workspace }}
+
+      - name: CLI core help shows the 5 core commands + ADVANCED pointer
+        run: |
+          HELP=$(node packages/cli/dist/index.js)
+          for cmd in "init" "ingest" "query" "status" "rewiki" "ADVANCED"; do
+            echo "$HELP" | grep -qF -- "$cmd" \
+              && echo "  ✓ core help: $cmd" \
+              || (echo "  ✗ MISSING from core help: $cmd" && exit 1)
+          done
+        working-directory: ${{ github.workspace }}
+
+      - name: CLI advanced help shows the advanced surface
+        run: |
+          ADV_HELP=$(node packages/cli/dist/index.js advanced --help)
+          for cmd in "watch" "sync" "ui" "review" "recent" "suggest" "update"; do
+            echo "$ADV_HELP" | grep -qF -- "$cmd" \
+              && echo "  ✓ advanced help: $cmd" \
+              || (echo "  ✗ MISSING from advanced help: $cmd" && exit 1)
+          done
+        working-directory: ${{ github.workspace }}
+
+      - name: Bare-form advanced commands still work (bright line — zero removal)
+        run: |
+          node packages/cli/dist/index.js watch status > /dev/null \
+            && echo "  ✓ bare-form 'watch status' still works"
+          node packages/cli/dist/index.js advanced watch status > /dev/null \
+            && echo "  ✓ 'advanced watch status' also works"
+        working-directory: ${{ github.workspace }}
+
+      - name: Bridge detection unit test
+        run: |
+          # detectBridge uses `which` to probe for binaries — create mock stubs
+          # so CI can test the routing logic without real AI tools installed.
+          mkdir -p /tmp/mock-bins
+          for bin in claude copilot codex; do
+            printf '#!/bin/sh\nexit 0\n' > /tmp/mock-bins/$bin
+            chmod +x /tmp/mock-bins/$bin
+          done
+
+          PATH="/tmp/mock-bins:$PATH" node -e "
+          const { detectBridge } = require('./packages/cli/dist/commands/watch');
+          const tests = [
+            [{ useAI: false }, 'none'],
+            [{ useAI: true, forceClaude: true }, 'claude'],
+            [{ useAI: true, forceCopilot: true }, 'copilot'],
+          ];
+          for (const [opts, expected] of tests) {
+            const got = detectBridge(opts);
+            if (got !== expected) {
+              console.error('FAIL:', JSON.stringify(opts), '→ got', got, 'expected', expected);
+              process.exit(1);
+            }
+            console.log('PASS:', JSON.stringify(opts), '→', got);
+          }
+          "
+        working-directory: ${{ github.workspace }}
+
+      - name: Pre-release check script
+        run: bash scripts/pre-release-check.sh
+        working-directory: ${{ github.workspace }}

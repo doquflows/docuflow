@@ -1,0 +1,15 @@
+{
+  "name": "docuflow",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/core && npm run build -w packages/studio && npm run build -w packages/server && npm run build -w packages/cli",
+    "build:core": "npm run build -w packages/core && npm run build -w packages/server && npm run build -w packages/cli",
+    "build:studio": "npm run build -w packages/studio",
+    "build:ui": "npm run build:ui -w packages/studio",
+    "test": "vitest run",
+    "dev:ui": "npm run dev:ui -w packages/studio"
+  }
+}

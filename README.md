@@ -7,6 +7,7 @@ https://github.com/user-attachments/assets/e8e75f1e-9fcb-48ab-ae9d-29b14dea2212
 [![npm downloads @doquflow/cli](https://img.shields.io/npm/dm/@doquflow/cli?label=%40doquflow%2Fcli&style=flat-square&color=6366f1)](https://www.npmjs.com/package/@doquflow/cli)
 [![npm downloads @doquflow/server](https://img.shields.io/npm/dm/@doquflow/server?label=%40doquflow%2Fserver&style=flat-square&color=10b981)](https://www.npmjs.com/package/@doquflow/server)
 [![npm version](https://img.shields.io/npm/v/@doquflow/cli?label=version&style=flat-square&color=374151)](https://www.npmjs.com/package/@doquflow/cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=flat-square&logo=github)](https://shaifulshabuj.github.io/docuflow-mcp/)
 
 ![npm download chart](./assets/npm-downloads.svg)
@@ -89,14 +90,13 @@ Installing `@doquflow/cli` always gives you the current release.
 
 ---
 
-## About this repository
+## Open Source & License
 
-This repository is the public home of Docuflow: usage documentation, release notes and issues. **It does not contain the source code** — Docuflow is a commercial product and the implementation is developed privately.
+Docuflow is open source software licensed under the [MIT License](LICENSE).
+Contributions, bug reports, and pull requests are welcome.
 
 - **Install:** `npm install -g @doquflow/cli`
 - **Documentation:** [shaifulshabuj.github.io/docuflow-mcp](https://shaifulshabuj.github.io/docuflow-mcp/)
-- **Issues and questions:** open an issue here
+- **Issues and PRs:** [github.com/doquflows/docuflow/issues](https://github.com/doquflows/docuflow/issues)
 
-Docuflow is free to use, with no warranty and at your own risk. Redistribution, resale, modification and rights in the source code are not granted. Versions published before 2026-08-27 remain under the MIT Licence. See [LICENSE](LICENSE).
-
-© Shaiful Shabuj. All rights reserved.
+© 2026 Shaiful Shabuj.

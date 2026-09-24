@@ -1,43 +1,21 @@
-Copyright (c) 2026 Shaiful Shabuj. All rights reserved.
+MIT License
 
-PROPRIETARY SOFTWARE LICENCE
+Copyright (c) 2026 Shaiful Shabuj
 
-This software is made available free of charge. It is not open source.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. GRANT OF LICENCE
-   You are granted a non-exclusive, non-transferable, revocable licence to install and use this
-   software, in its published compiled form, for any purpose, personal or commercial, at no cost.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. RESTRICTIONS
-   You may NOT:
-   a) sell, resell, rent, lease, sublicense, or otherwise charge any fee for this software or for
-      access to it, whether alone or as part of a larger offering;
-   b) copy, redistribute, republish, or mirror this software, in whole or in part;
-   c) modify, adapt, translate, or create derivative works from this software;
-   d) reverse engineer, decompile, or disassemble this software, or attempt to derive its source
-      code, except to the limited extent that applicable law expressly permits despite this
-      restriction;
-   e) remove, obscure, or alter any copyright, trademark, or other proprietary notice.
-
-3. OWNERSHIP
-   The software, its source code, and all intellectual property rights in it remain the exclusive
-   property of the copyright holder. This licence grants a right to USE the software only. No rights
-   in the source code are granted, transferred, or implied.
-
-4. NO WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-   NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-   NONINFRINGEMENT. YOU USE THIS SOFTWARE ENTIRELY AT YOUR OWN RISK.
-
-5. LIMITATION OF LIABILITY
-   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
-   WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH
-   THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-6. TERMINATION
-   This licence terminates automatically if you breach any of its terms. On termination you must
-   cease all use of the software and destroy all copies in your possession.
-
-7. PRIOR VERSIONS
-   Versions of this software published before 2026-08-27 were released under the MIT Licence. Those
-   versions remain governed by the MIT Licence. This licence governs this and all later versions.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

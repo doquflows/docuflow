@@ -1,0 +1,54 @@
+/* DocuFlow base styles
+   Reset, body defaults, and fundamental typography helpers. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: var(--df-bg);
+  color: var(--df-text);
+  font-family: var(--df-font-sans);
+  font-feature-settings: 'cv11', 'ss01';
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button { font-family: inherit; }
+
+/* Type role utilities */
+.df-mono  { font-family: var(--df-font-mono); font-feature-settings: 'cv01','cv02'; }
+.df-serif { font-family: var(--df-font-serif); }
+
+/* Scrollbars */
+::-webkit-scrollbar         { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb   { background: var(--df-border-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--df-border-3); }
+::-webkit-scrollbar-track   { background: transparent; }
+
+/* Selection */
+::selection { background: var(--df-accent-soft); color: var(--df-text); }
+
+/* App shell */
+.df-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.df-app__main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+.df-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  background: var(--df-bg);
+}
