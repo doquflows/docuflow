@@ -65,9 +65,11 @@ for f in README.md LICENSE CHANGELOG.md FEATURES.md; do
   [ -f "$f" ] && check "$f exists" "pass" || check "$f exists" "fail"
 done
 
-for f in release/README.md release/CHANGELOG.md; do
-  [ -f "$f" ] && check "$f exists" "pass" || check "$f exists" "fail"
-done
+if [ -d "release" ]; then
+  for f in release/README.md release/CHANGELOG.md; do
+    [ -f "$f" ] && check "$f exists" "pass" || check "$f exists" "fail"
+  done
+fi
 
 # ── 4. Compiled dist files (CLI commands) ────────────────────────────────────
 
